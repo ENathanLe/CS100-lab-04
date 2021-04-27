@@ -16,7 +16,7 @@ Person::Person(const char *name_, Person* father_, Person* mother_){
 }
 
 Person::~Person(){
-    delete children;
+    delete[] children; //children is an array so it should be deconstruced using delete[]
 }
 
 void Person::addChild(Person *newChild){
