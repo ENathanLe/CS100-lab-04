@@ -80,5 +80,7 @@ void expand(Person ***t, int *MAX){
   Person **temp = new Person*[2 * *MAX];
   memcpy(temp, *t, *MAX * sizeof(**t));
   *MAX *= 2;
+  Person **tempptr = *t; //hold the location of the initial array
   *t = temp;
+  delete[] tempptr; //free up the location of the initial array after *t has pointed to a new location
 }
