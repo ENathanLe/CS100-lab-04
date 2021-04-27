@@ -16,6 +16,7 @@ Person::Person(const char *name_, Person* father_, Person* mother_){
 }
 
 Person::~Person(){
+    delete[] name; //the name must be freed as well
     delete[] children; //children is an array so it should be deconstruced using delete[]
 }
 
@@ -53,7 +54,7 @@ void Person::printLineage(char dir, int level){
         }
     }
 
-    delete temp;
+    delete[] temp;
 }
 
 /* helper function to compute the lineage
