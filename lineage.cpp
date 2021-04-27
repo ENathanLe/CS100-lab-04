@@ -14,7 +14,7 @@ int main() {
     theList.printLineage("Jim");
     theList.printLineage("Kim");
     theList.printLineage("Betty");
-
+    
     return 0;
 } 
 
